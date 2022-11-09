@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Register.Register_Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/Name_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_normal"
+                android:hint="이름을 입력하세요."
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="전화번호"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/PN_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_normal"
+                android:hint="전화번호를 입력하세요."
+                android:inputType="phone"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/sendPNCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_draw"
+                android:padding="15dp"
+                android:text="인증번호 전송"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:onClick="requestVerifyPhoneNumberButtonFunc"/>
+
+            <LinearLayout
+                android:id="@+id/PNCodeLinear_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/PNCode_register"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:layout_marginRight="2.5dp"
+                    android:background="@drawable/edittext_normal"
+                    android:hint="인증번호를 입력하세요."
+                    android:inputType="phone"
+                    android:padding="15dp"
+                    android:singleLine="true"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/verifyPNCodeButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2.5dp"
+                    android:background="@drawable/button_draw"
+                    android:padding="15dp"
+                    android:text="OK"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:onClick="verifyCredentialCodeButtonFunc" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="비밀번호"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/PW_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_normal"
+                android:hint="비밀번호를 입력하세요."
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="비밀번호 확인"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/PWCheck_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_normal"
+                android:hint="비밀번호를 한 번 더 입력하세요."
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/PWnotEqualAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:text="비밀번호가 일치하지 않습니다."
+                android:textColor="@color/apple_close_red"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="성별"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+
+            <RadioGroup
+                android:id="@+id/gender_register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/male_register"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_draw"
+                    android:button="@null"
+                    android:padding="10dp"
+                    android:text="남자"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/radio_text_draw"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/female_register"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_draw"
+                    android:button="@null"
+                    android:padding="10dp"
+                    android:text="여자"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/radio_text_draw"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="캠퍼스"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/campus_register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/ujeoungbu_register"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_draw"
+                    android:button="@null"
+                    android:padding="10dp"
+                    android:text="의정부 캠퍼스"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/radio_text_draw"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/dongduchun_register"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_draw"
+                    android:button="@null"
+                    android:padding="10dp"
+                    android:text="동두천 캠퍼스"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/radio_text_draw"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="흡연 여부"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+            <RadioGroup
+                android:id="@+id/smokeRG_register"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/smoke_register"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_draw"
+                    android:button="@null"
+                    android:padding="10dp"
+                    android:text="흡연"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/radio_text_draw"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/non_smoke_register"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_draw"
+                    android:button="@null"
+                    android:padding="10dp"
+                    android:text="비흡연"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/radio_text_draw"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/register_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_draw"
+                android:onClick="registerRequestButtonFunc"
+                android:padding="5dp"
+                android:text="회원가입"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/icon_circle"
+        android:gravity="top"
+        android:height="80dp"
+        android:width="80dp"/>
+    <item
+        android:drawable="@drawable/icon_person_waterblue"
+        android:gravity="center"
+        android:width="60dp"
+        android:height="60dp" />
+</layer-list>

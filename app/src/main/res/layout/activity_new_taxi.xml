@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".Taxi.NewTaxi.NewTaxi_Activity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="출발지"
+                android:textColor="@color/black"
+                android:textSize="40dp" />
+
+            <EditText
+                android:id="@+id/newTX_startPointET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_normal"
+                android:hint="출발지를 간단하게 입력하세요."
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/newTX_startPointDescET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_normal"
+                android:hint="출발지를 자세하게 입력하세요."
+                android:padding="15dp"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="목적지"
+                android:textColor="@color/black"
+                android:textSize="40dp" />
+
+            <EditText
+                android:id="@+id/newTX_destinationET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_normal"
+                android:hint="목적지를 간단하게 입력하세요."
+                android:padding="15dp"
+                android:singleLine="true"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/newTX_destinationDescET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_normal"
+                android:hint="목적지를 자세하게 입력하세요."
+                android:padding="15dp"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="날짜"
+                    android:textColor="@color/black"
+                    android:textSize="40dp" />
+
+                <TextView
+                    android:id="@+id/newTX_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="40dp" />
+
+                <Button
+                    android:id="@+id/newTX_changeDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_draw"
+                    android:text="변경"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:onClick="changeDate"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/newTX_calendarLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <CalendarView
+                    android:id="@+id/newTX_calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@drawable/button_draw"
+                    android:text="확인"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:onClick="confirmDate"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="시간"
+                    android:textColor="@color/black"
+                    android:textSize="40dp" />
+
+                <TextView
+                    android:id="@+id/newTX_timeTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="08 : 20"
+                    android:textColor="@color/black"
+                    android:textSize="40dp" />
+
+                <Button
+                    android:id="@+id/newTX_changeTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_draw"
+                    android:text="변경"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:onClick="changeTime"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/newTX_timePickLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TimePicker
+                    android:id="@+id/newTX_timePicker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:timePickerMode="spinner"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_draw"
+                    android:text="확인"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:onClick="confirmTime"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="탑승조건"
+                android:textColor="@color/black"
+                android:textSize="40dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/newTX_sameG"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/radio_draw"
+                    android:button="@null"
+                    android:padding="5dp"
+                    android:text="동성만"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/radio_text_draw"
+                    android:textSize="25sp"/>
+
+                <CheckBox
+                    android:id="@+id/newTX_noSmoke"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/radio_draw"
+                    android:button="@null"
+                    android:padding="5dp"
+                    android:text="비흡연자만"
+                    android:textAlignment="center"
+                    android:textColor="@drawable/radio_text_draw"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="인원수"
+                    android:textColor="@color/black"
+                    android:textSize="40dp" />
+
+                <EditText
+                    android:id="@+id/newTX_admit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="85dp"
+                    android:background="@drawable/edittext_normal"
+                    android:text="3"
+                    android:padding="15dp"
+                    android:textSize="25sp"
+                    android:textAlignment="center"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="명"
+                    android:textColor="@color/black"
+                    android:textSize="40dp" />
+
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:padding="10dp"
+                android:background="@drawable/button_draw"
+                android:text="등록"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:onClick="taxiRegisterButton"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

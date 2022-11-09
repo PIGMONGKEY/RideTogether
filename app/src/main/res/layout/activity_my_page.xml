@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MyPage.MyPage_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/waterblue"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mp_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text=" 님 안녕하세요"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/mp_mapRG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/mp_myInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mp_radio_background"
+                android:button="@null"
+                android:drawableTop="@drawable/mp_myinfo_layer_list"
+                android:paddingBottom="10dp"
+                android:text="내 정보"
+                android:textAlignment="center"
+                android:textColor="@drawable/mp_radio_text_selector"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/mp_carpool"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mp_radio_background"
+                android:button="@null"
+                android:drawableTop="@drawable/mp_carpooluse_layer_list"
+                android:paddingBottom="10dp"
+                android:text="카풀\n이용내역"
+                android:textAlignment="center"
+                android:textColor="@drawable/mp_radio_text_selector"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/mp_taxi"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mp_radio_background"
+                android:button="@null"
+                android:drawableTop="@drawable/mp_taxiuse_layer_list"
+                android:paddingBottom="10dp"
+                android:text="택시\n이용내역"
+                android:textAlignment="center"
+                android:textColor="@drawable/mp_radio_text_selector"
+                android:textSize="20sp" />
+
+            <RadioButton
+                android:id="@+id/mp_bug"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/mp_radio_background"
+                android:button="@null"
+                android:drawableTop="@drawable/mp_bugreport_layer_list"
+                android:paddingBottom="10dp"
+                android:text="버그 신고"
+                android:textAlignment="center"
+                android:textColor="@drawable/mp_radio_text_selector"
+                android:textSize="20sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    //내 정보
+
+    <RelativeLayout
+        android:id="@+id/mp_userInfoRelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        //유저정보 표시 창
+
+        <LinearLayout
+            android:id="@+id/mp_userInfoShowLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/mp_userinfo_linear_draw"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <TextView
+                android:id="@+id/mp_pn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/mp_gender_smoke"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/mp_campus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="34sp" />
+        </LinearLayout>
+
+        //비밀번호 변경 창
+
+        <LinearLayout
+            android:id="@+id/mp_changePasswordLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/mp_userinfo_linear_draw"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="기존 비밀번호"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/mp_curPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textSize="16sp"
+                android:hint="기존 비밀번호를 입력해주세요."/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="새 비밀번호"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/mp_newPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textSize="16sp"
+                android:hint="새 비밀번호를 입력해주세요."/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="새 비밀번호 확인"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/mp_newPasswordCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textSize="16sp"
+                android:hint="새 비밀번호를 한 번 더 입력해주세요."/>
+
+            <TextView
+                android:id="@+id/mp_PWnotEqualAlert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:text="비밀번호가 일치하지 않습니다."
+                android:textColor="@color/apple_close_red"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        //유저정보 표시시 버튼
+
+        <Button
+            android:id="@+id/mp_showPasswordChangeLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/mp_logout"
+            android:background="@drawable/button_draw"
+            android:text="비밀번호 변경"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/mp_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_draw_red"
+            android:text="로그아웃"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        //비밀번호 변경 표시시 버튼
+
+        <Button
+            android:id="@+id/mp_changePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/mp_cancelChangePassword"
+            android:background="@drawable/button_draw"
+            android:text="비밀번호 변경"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/mp_cancelChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_draw_red"
+            android:text="취소"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    //카풀 이용내역
+
+    <ListView
+        android:id="@+id/mp_carpoolListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:visibility="gone"/>
+
+    //택시 이용내역
+    <ListView
+        android:id="@+id/mp_taxiListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:visibility="gone"/>
+
+    //버그 신고
+
+    <LinearLayout
+        android:id="@+id/mp_bugReportLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@drawable/mp_userinfo_linear_draw"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingBottom="30dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="34sp"
+            android:text="개발자 정보"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="34sp"
+            android:text="@string/developer_name"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="34sp"
+            android:text="@string/developer_pn"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:text="@string/developer_email"/>
+
+    </LinearLayout>
+
+</LinearLayout>

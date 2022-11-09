@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "39203691139",
+    "project_id": "ridetoge",
+    "storage_bucket": "ridetoge.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:39203691139:android:edfdeefd3fe5e98e41d9b6Au",
+        "android_client_info": {
+          "package_name": "kr.co.shinhan.www"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "39203691139-bgd0dju42evbisk4620dd92oabqtotn6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.co.shinhan.www",
+            "certificate_hash": "be5b82676c28d0a9b7620228bd8dafa5ee18f0f9"
+          }
+        },
+        {
+          "client_id": "39203691139-s346md3gi0436356igkv7pse07uv5vsg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWsZ_GqJ_XPc9LhtB8ffnPlWeKB1DPc_U"
+
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "39203691139-s346md3gi0436356igkv7pse07uv5vsg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="kr.co.shinhan.www">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.같이타요"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="21">
+        <activity
+            android:name=".ResetPassword.ResetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".Taxi.TaxiInfo.TaxiInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Taxi.NewTaxi.NewTaxi_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Taxi.TaxiBoardList.TaxiBoard_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".MyPage.MyPage_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Carpool.CarpoolInfo.CarpoolInfo_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Carpool.NewCarpool.NewCarpool_Activity"
+            android:exported="false"
+            android:parentActivityName=".Carpool.CarpoolBoardList.CarpoolBoard_Activity" />
+        <activity
+            android:name=".Carpool.CarpoolBoardList.CarpoolBoard_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Home_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Login.Login_Activity"
+            android:exported="false"
+            android:parentActivityName=".Start_Activity" />
+        <activity
+            android:name=".Register.Register_Activity"
+            android:exported="false"
+            android:parentActivityName=".Login.Login_Activity" />
+        <activity
+            android:name=".Start_Activity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

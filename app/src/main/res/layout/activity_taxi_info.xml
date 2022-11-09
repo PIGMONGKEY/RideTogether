@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".Taxi.TaxiInfo.TaxiInfo_Activity">
+
+    <LinearLayout
+        android:id="@+id/TaxiInfoLinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radio_draw"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/ti_start_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="출발지 : "
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ti_start_point_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="TextView"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/ti_destination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="목적지 : "
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ti_destination_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="TextView"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/ti_departure_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="출발 날짜 : "
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ti_departure_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="출발 시간 : "
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ti_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="탑승 가능 성별 : "
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ti_smoke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="흡연자 탑승 : "
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ti_leftSeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="남은 자리 : "
+            android:textColor="#000000"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ti_deleteTaxi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:background="@drawable/button_draw_red"
+        android:text="삭제"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:onClick="deleteTaxiButtonFunc"/>
+
+    <Button
+        android:id="@+id/ti_joinTaxi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:background="@drawable/button_draw"
+        android:text="참여"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:onClick="joinTaxiButtonFunc"/>
+
+    <Button
+        android:id="@+id/ti_cancel_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:background="@drawable/button_draw_red"
+        android:text="참여 취소"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:onClick="cancelJoinTaxiButtonFunc"/>
+
+</RelativeLayout>
